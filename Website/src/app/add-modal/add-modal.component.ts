@@ -5,7 +5,6 @@ import { Contact } from '../service/service.component';
 
 @Component({
   selector: 'ngbd-modal-confirm-autofocus-add',
-  styleUrls: ['./add-modal.component.css'],
   template: `
   <div class="modal-body">
   <b style="color:#806703" *ngIf="firstNameCheck">*</b>
