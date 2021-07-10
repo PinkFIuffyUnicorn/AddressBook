@@ -1,0 +1,57 @@
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: solid;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float-container {
+    padding: 20px;
+}
+
+.float-child1 {
+    width: 20%;
+    float: left;
+    padding: 20px;
+}
+
+.float-child2 {
+    width: 50%;
+    float: left;
+    padding: 20px;
+} 
+
+.float-heading {
+    float: center;
+    padding-left: 50%;
+}
+
+.float-children {
+    padding-left: 20%;
+}
+
+.buttons-filter {
+    float: left;
+}
+
+.buttons-add {
+    float: left;
+    padding-left: 5%;
+}

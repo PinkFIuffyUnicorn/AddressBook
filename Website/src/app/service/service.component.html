@@ -1,0 +1,86 @@
+<html>
+    <body>
+        <div>
+            <div class="float-container">
+                <div class="float-heading">
+                    <h1>Address Book</h1>
+                </div>
+                <div class="float-children">
+                    <div class="float-child1">
+                        <b>{{ displayColumns[0] }}</b>
+                        <input
+                            type="text"
+                            class="form-control"
+                            (input)="onUpdateId($event)"
+                            (keyup.enter)="filterList()">
+
+                        <b>{{ displayColumns[1] }}</b>
+                        <input
+                            type="text"
+                            class="form-control"
+                            (input)="onUpdateFirstName($event)"
+                            (keyup.enter)="filterList()">
+
+                        <b>{{ displayColumns[2] }}</b>
+                        <input
+                            type="text"
+                            class="form-control"
+                            (input)="onUpdateLastName($event)"
+                            (keyup.enter)="filterList()">
+
+                        <b>{{ displayColumns[3] }}</b>
+                        <input
+                            type="text"
+                            class="form-control"
+                            (input)="onUpdateAddress($event)"
+                            (keyup.enter)="filterList()">
+
+                        <b>{{ displayColumns[4] }}</b>
+                        <input
+                            type="text"
+                            class="form-control"
+                            (input)="onUpdateTelephoneNumber($event)"
+                            (keyup.enter)="filterList()">
+
+                        <br>
+
+                        <div>
+                            <div class="buttons-filter">
+                                <button
+                                    class="btn btn-outline-primary"
+                                    (click)="filterList()">Filter List</button>
+                            </div>
+                            <div class="buttons-add">
+                                <app-add-modal [dataList]="dataList"></app-add-modal>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="float-child2">
+                        <table class="center">
+                            <th scope="col">#</th>
+                            <th scope="col" >{{ displayColumns[0] }}</th>
+                            <th scope="col">{{ displayColumns[1] }}</th>
+                            <th scope="col">{{ displayColumns[2] }}</th>
+                            <th scope="col">{{ displayColumns[3] }}</th>
+                            <th scope="col">{{ displayColumns[4] }}</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
+                            <tr *ngFor="let item of dataList | slice: (page-1) * pageSize : page * pageSize; index as i">
+                                <td scope="row"><b>{{ (page -1) * pageSize + i + 1 }}</b></td>
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.firstName }}</td>
+                                <td>{{ item.lastName }}</td>
+                                <td>{{ item.address }}</td>
+                                <td>{{ item.telephoneNumber }}</td>
+                                <td><app-delete-modal [item]="item" [dataList]="dataList"></app-delete-modal></td>
+                                <td><app-update-modal [item]="item" [dataList]="dataList" firstName="{{item.firstName}}" lastName="{{item.lastName}}" address="{{item.address}}" telephoneNumber="{{item.telephoneNumber}}" [id]=item.id></app-update-modal></td>
+                            </tr>
+                        </table>
+                        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [maxSize]="5" [boundaryLinks]="true" [pageSize]="pageSize" class="d-flex justify-content-center"></ngb-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
