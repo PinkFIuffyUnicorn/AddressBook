@@ -1,12 +1,12 @@
 # AddressBook
 
+## Prerequisites
+- Have a running SQL Server with the name `MSSQLSERVER2` and a database named `master`
+
 ## Usage
 - Execute the .sql file in the folder DB (CREATE TABLE command is mandatory, INSERT statements are just for dummy data), on your SQL Server
 - Run the API from the API folder with Visual Studio 2019 (run it with ISS Express, so you can access it on the URL: `http://localhost:20047/swagger`)
 - Run the website by opening the Website folder in CMD (Command Line) and execute the command `npm install` and after it finishes execute `ng serve`, this will run the website on the URL: `http://localhost:4200/`
-
-## Prerequisites
-- Have a running SQL Server with the name `MSSQLSERVER2` and a database named `master`
 
 ## Improvements
 ### Website
