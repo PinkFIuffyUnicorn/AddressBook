@@ -1,7 +1,7 @@
 # AddressBook
 
 ## Prerequisites
-- Have a running SQL Server with the name `MSSQLSERVER2` and a database named `master`
+- Have a locally running SQL Server with the name `MSSQLSERVER2` and a database named `master`
 
 ## Usage
 - Execute the .sql file in the folder DB (CREATE TABLE command is mandatory, INSERT statements are just for dummy data), on your SQL Server
