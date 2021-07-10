@@ -14,3 +14,5 @@
 - Make code more readable by moving the templates defined with HTML code into separate files and use templateURL
 - Fix when adding or deleting new contacts, the number of pages does not update if the record added or deleted caused the records to be moved to one additional or one less page
 - Improve the visual looks of the whole application
+### DB
+- Move address field to a separate table and divide it into street address, house number, city, country, ...
